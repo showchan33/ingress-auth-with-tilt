@@ -1,0 +1,5 @@
+authSignIn:
+  hostname: "localhost"
+  port: "80"
+authWebApp:
+  sessionMaxAgeSecond: "300"

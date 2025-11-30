@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ts-form-auth-webapp
+  name: ts-form-auth-webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-form-auth-webapp
+  template:
+    metadata:
+      labels:
+        app: ts-form-auth-webapp
+    spec:
+      containers:
+      - image: ts-form-auth-webapp
+        name: ts-form-auth-webapp-web
+        envFrom:
+          - configMapRef:
+              name: ts-form-auth-webapp-config

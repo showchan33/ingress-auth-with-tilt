@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: ts-form-auth-webapp
+  name: ts-form-auth-webapp
+spec:
+  ports:
+  - port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: ts-form-auth-webapp
+  type: ClusterIP
