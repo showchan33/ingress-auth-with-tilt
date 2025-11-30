@@ -1,4 +1,4 @@
 [submodule "ts-form-auth-webapp"]
-    path = ts-form-auth-webapp
-    url = https://github.com/showchan33/ts-form-auth-webapp.git
+	path = ts-form-auth-webapp
+	url = https://github.com/showchan33/ts-form-auth-webapp.git
 

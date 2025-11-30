@@ -26,7 +26,16 @@ NGINX Ingress Controller を介して、認証済みユーザーのみがバッ�
 
 ## セットアップ
 
-1.  **.env ファイルの作成**
+1.  **リポジトリのクローン**
+
+    `--recurse-submodules` オプションを付けて、リポジトリをクローンします。
+
+    ```bash
+    git clone --recurse-submodules https://github.com/showchan33/ingress-auth-with-tilt.git
+    cd ingress-auth-with-tilt
+    ```
+
+2.  **.env ファイルの作成**
 
     `.env.sample` をコピーして `.env` ファイルを作成し、環境に合わせて以下の変数を設定します。
 
@@ -38,7 +47,7 @@ NGINX Ingress Controller を介して、認証済みユーザーのみがバッ�
     -   `K8S_CONTEXT`: Tilt が使用する Kubernetes のコンテキスト (オプション)
     -   `K8S_NAMESPACE`: デプロイ先の Kubernetes 名前空間 (デフォルト: `default`)
 
-2.  **values.yaml ファイルの作成**
+3.  **values.yaml ファイルの作成**
 
     `helm-chart/values.yaml.sample` をコピーして `helm-chart/values.yaml` を作成し、必要に応じて値を設定します。
 
@@ -69,6 +78,8 @@ Tilt の UI が Web ブラウザで開き、デプロイの状況を確認でき
 
 ## 技術スタック
 
+-   TypeScript
+-   Node.js / Express
 -   Tilt
 -   Kubernetes
 -   Helm
