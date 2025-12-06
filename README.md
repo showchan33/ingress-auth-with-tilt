@@ -69,18 +69,11 @@ tilt up
 
 Tilt の UI が Web ブラウザで開き、デプロイの状況を確認できます。
 
-デプロイ完了後、`http://[authSignIn.hostname]:[authSignIn.port]`にアクセスすると、ログイン画面が表示されます。
+デプロイ完了後、`http://[authSignIn.hostname]:[authSignIn.port]/nginx`にアクセスすると、ログインページにリダイレクトします。
 
--   **ユーザーID**: `user1`
--   **パスワード**: `pass1`
+ログインページで、
 
-でログインできます。
+- **ユーザーID**: `user1`
+- **パスワード**: `pass1`
 
-## 技術スタック
-
--   TypeScript
--   Node.js / Express
--   Tilt
--   Kubernetes
--   Helm
--   Docker
+を入力すると、NGINXのサンプルページが表示されます。
